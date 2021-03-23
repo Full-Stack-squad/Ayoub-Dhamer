@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="700.0" prefWidth="1054.0" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvenementController">
+   <children>
+      <JFXTabPane prefHeight="710.0" prefWidth="1094.0">
+         <tabs>
+            <Tab text="Evenement">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="674.0" prefWidth="442.0" style="-fx-background-color: #363648;">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Gérer  les evenements" textFill="WHITE">
+                                       <font>
+                                          <Font size="33.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="titre" prefHeight="54.0" prefWidth="255.0" promptText="Titre">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="erreurtitre" prefHeight="34.0" prefWidth="317.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="136.0" prefWidth="380.0">
+                                 <children>
+                                    <TextField fx:id="contenu" alignment="TOP_LEFT" prefHeight="106.0" prefWidth="263.0" promptText="Contenu">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="erreurcontenu" prefHeight="35.0" prefWidth="311.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="133.0" prefWidth="380.0">
+                                 <children>
+                                    <Button fx:id="imagee" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#importimage" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #B15837;" text="import image" textFill="WHITE" />
+                                    <ImageView fx:id="importeimage" fitHeight="105.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="erreurimg" prefHeight="33.0" prefWidth="291.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <DatePicker fx:id="dateajout" promptText="date d'ajout" style="-fx-background-color: #B15837;" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="erreurdateajout" prefHeight="29.0" prefWidth="310.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <DatePicker fx:id="datemodif" promptText="date de modification" style="-fx-background-color: #B15837;" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="erreurdatemodif" prefHeight="31.0" prefWidth="331.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="76.0" prefWidth="30.0" />
+                                    <Button mnemonicParsing="false" onAction="#ajouter" prefHeight="40.0" prefWidth="83.0" style="-fx-background-color: #B15837;" text="ajouter" textFill="WHITE" />
+                                    <VBox prefHeight="76.0" prefWidth="44.0" />
+                                    <Button mnemonicParsing="false" onAction="#modifier" prefHeight="40.0" prefWidth="96.0" style="-fx-background-color: #B15837;" text="modifier" textFill="WHITE" />
+                                    <VBox prefHeight="76.0" prefWidth="55.0" />
+                                    <Button mnemonicParsing="false" onAction="#supprimer" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: #B15837;" text="supprimer" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <TableView fx:id="table1" layoutX="442.0" layoutY="38.0" prefHeight="532.0" prefWidth="640.0">
+                          <columns>
+                            <TableColumn fx:id="tabletitre" prefWidth="107.0" text="titre" />
+                            <TableColumn fx:id="tablecontenu" prefWidth="122.0" text="contenu" />
+                              <TableColumn fx:id="tableimage" prefWidth="137.0" text="image" />
+                              <TableColumn fx:id="tabledajout" prefWidth="133.0" text="date d'ajout" />
+                              <TableColumn fx:id="tabledmodif" prefWidth="157.0" text="date de limite" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="924.0" layoutY="597.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="96.0" style="-fx-background-color: #B15837;" text="retourner" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="participation">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="674.0" prefWidth="442.0" style="-fx-background-color: #363648;">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Gérer  les participations" textFill="WHITE">
+                                       <font>
+                                          <Font size="33.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="76.0" prefWidth="30.0" />
+                                    <Button mnemonicParsing="false" onAction="#supprimerPartcipation" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: #B15837;" text="supprimer" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button layoutX="924.0" layoutY="597.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="96.0" style="-fx-background-color: #B15837;" text="retourner" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="table_participation" layoutX="473.0" layoutY="59.0" prefHeight="434.0" prefWidth="575.0">
+                          <columns>
+                            <TableColumn fx:id="id_evenement" prefWidth="213.0" text="Id_evenement" />
+                            <TableColumn fx:id="id_user" prefWidth="181.0" text="Id_user" />
+                              <TableColumn fx:id="date_participation" prefWidth="180.0" text="date de participation" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="statistique">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <PieChart fx:id="piechart" layoutX="158.0" layoutY="2.0" prefHeight="669.0" prefWidth="855.0" title="Nombre de Participation a l'evenement" />
+                        <Label fx:id="caption" prefHeight="28.0" prefWidth="329.0">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

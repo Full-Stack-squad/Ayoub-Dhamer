@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1f1f22;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BackGallController">
+   <children>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="87.0" prefWidth="209.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="92.0" prefWidth="242.0" style="-fx-background-color: #fabe2e; -fx-background-radius: 10;" text="Fotify" textFill="#1f1f22">
+               <font>
+                  <Font name="Bauhaus 93" size="60.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="tvphoto" layoutX="261.0" layoutY="72.0" prefHeight="281.0" prefWidth="318.0">
+        <columns>
+          <TableColumn fx:id="coltitre" prefWidth="75.0" text="titre" />
+          <TableColumn fx:id="coltheme" prefWidth="83.0" text="theme" />
+            <TableColumn fx:id="colcouleur" prefWidth="76.0" text="couleur" />
+            <TableColumn fx:id="coldate" prefWidth="83.0" text="Date ajout" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnsupp" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-border-color: #fabe1e; -fx-background-radius: 12; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-color: #1f1f22;" text="Supprimer" textFill="WHITE" />
+      <Button layoutX="124.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" style="-fx-border-color: #fabe1e; -fx-background-radius: 12; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-color: #1f1f22;" text="Retour" textFill="WHITE" />
+      <ImageView fx:id="imgv" fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

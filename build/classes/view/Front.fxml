@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="panne" prefHeight="654.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FController">
+   <children>
+      <VBox layoutX="33.0" layoutY="75.0" prefHeight="43.0" prefWidth="273.0" style="-fx-background-color: #363648;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="277.0">
+               <children>
+                  <Button fx:id="gal" alignment="CENTER" mnemonicParsing="false" onAction="#gererGalerie" prefHeight="49.0" prefWidth="323.0" style="-fx-background-color: #B15837; -fx-border-color: #363648;" text="Galerie" textFill="#363648">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="46.0" layoutY="240.0" prefHeight="43.0" prefWidth="277.0" style="-fx-background-color: #363648;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="277.0">
+               <children>
+                  <Button fx:id="ab512" alignment="CENTER" mnemonicParsing="false" onAction="#gererevenements" prefHeight="49.0" prefWidth="323.0" style="-fx-background-color: #B15837; -fx-border-color: #363648;" text="Gerer evenement" textFill="#363648">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="337.0" layoutY="151.0" prefHeight="44.0" prefWidth="316.0">
+         <children>
+            <Button fx:id="btncours" alignment="CENTER" mnemonicParsing="false" onAction="#gererPDF" prefHeight="49.0" prefWidth="323.0" style="-fx-background-color: #B15837; -fx-border-color: #363648;" text="Gerer Cours PDF" textFill="#363648">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

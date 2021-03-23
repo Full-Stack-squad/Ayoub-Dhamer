@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="600.0" style="-fx-background-color: #1f1f22;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+   <children>
+      <ImageView fitHeight="633.0" fitWidth="438.0" layoutX="80.0" layoutY="6.0" opacity="0.27" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/backSignUp.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="99.0" layoutY="14.0" prefHeight="728.0" prefWidth="402.0">
+         <children>
+            <Label layoutX="129.0" layoutY="34.0" prefHeight="47.0" prefWidth="167.0" text="SignUp" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold Italic" size="39.0" />
+               </font>
+               <graphic>
+                  <Line endX="-101.99996948242188" endY="58.85428237915039" fill="#fabe2e" startX="-101.99999237060547" startY="18.80402946472168" stroke="#fabe2e" style="-fx-stroke-width: 7;" />
+               </graphic>
+            </Label>
+            <TextField fx:id="TF_nom" accessibleRole="IMAGE_VIEW" layoutX="124.0" layoutY="110.0" promptText="Nom" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+               <effect>
+                  <Glow />
+               </effect></TextField>
+            <TextField fx:id="TF_presnom" layoutX="124.0" layoutY="158.0" promptText="Prénom" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="TF_email" layoutX="124.0" layoutY="205.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="TF_password" layoutX="124.0" layoutY="255.0" promptText="Password " style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="TF_age" layoutX="124.0" layoutY="309.0" prefWidth="149.0" promptText="Age" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="TF_tel" layoutX="124.0" layoutY="367.0" promptText="Téléphone" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="btn_signup" layoutX="150.0" layoutY="514.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" style="-fx-border-color: #fabe1e; -fx-background-color: #1f1f22; -fx-border-width: 3; -fx-border-radius: 10; -fx-background-radius: 12;" text="SignUp" textFill="WHITE" />
+            <Separator layoutX="14.0" layoutY="562.0" prefHeight="4.0" prefWidth="158.0" />
+            <Separator layoutX="213.0" layoutY="562.0" prefHeight="4.0" prefWidth="149.0" />
+            <Label layoutX="185.0" layoutY="554.0" text="Or" textFill="#c9c4c4" />
+            <Button fx:id="btn_signin_google" layoutX="99.0" layoutY="582.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" style="-fx-border-color: #fabe1e; -fx-background-color: #1f1f22; -fx-border-width: 3; -fx-border-radius: 10; -fx-background-radius: 12;" text="Sign In with Google " textFill="WHITE" />
+            <RadioButton fx:id="homme_rb" layoutX="98.0" layoutY="435.0" mnemonicParsing="false" text="Homme" textFill="#f8f5f5" />
+            <RadioButton fx:id="femme_rb" layoutX="258.0" layoutY="435.0" mnemonicParsing="false" text="Femme" textFill="#f2ecec" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
